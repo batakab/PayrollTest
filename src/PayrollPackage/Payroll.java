@@ -580,6 +580,7 @@ public class Payroll extends javax.swing.JFrame {
     if (text.length() >= 5) {
         evt.consume();
         return;
+        
     }
 
     // Allow only numeric input (0-9)
