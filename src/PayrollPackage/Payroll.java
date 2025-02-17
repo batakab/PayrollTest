@@ -196,7 +196,7 @@ public class Payroll extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("Deductions");
 
-        jLabel1.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jLabel1.setText("Payroll of Employee");
 
         idLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
@@ -672,7 +672,7 @@ public class Payroll extends javax.swing.JFrame {
     // Allow only numeric input (0-9)
     if (!Character.isDigit(c)) { 
         evt.consume();
-    }
+        }
     }//GEN-LAST:event_lateTextFieldKeyTyped
 
     private void calculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButtonActionPerformed
@@ -734,7 +734,6 @@ public class Payroll extends javax.swing.JFrame {
     }//GEN-LAST:event_RPHtextFieldActionPerformed
 
     private void posTextFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_posTextFieldKeyTyped
-        
         String text = posTextField.getText();
         
         if(text.length() >= 20){
