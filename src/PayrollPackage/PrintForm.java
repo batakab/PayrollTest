@@ -12,7 +12,7 @@ public class PrintForm extends javax.swing.JPanel {
 
     private String employeeID;
     private String employeeName;
-    private String position;
+//    private String position;
     private String insurance;
     private String sss;
     private String lates;
@@ -21,11 +21,12 @@ public class PrintForm extends javax.swing.JPanel {
     private String total;
     private double totalDeduction;
     private String mySalary;
+    private String myComboBox;
     
-    public PrintForm(String employeeID, String employeeName, String position, String insurance, String sss, String lates, double lateDeduction, String pagibig, String total, double totalDeduction, String mySalary) {
+    public PrintForm(String employeeID, String employeeName, String insurance, String sss, String lates, double lateDeduction, String pagibig, String total, double totalDeduction, String mySalary, String myComboBox) {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
-        this.position = position;
+//        this.position = position;
         this.insurance = insurance;
         this.sss = sss;
         this.lates = lates;
@@ -34,18 +35,20 @@ public class PrintForm extends javax.swing.JPanel {
         this.total = total;
         this.totalDeduction = totalDeduction;
         this.mySalary = mySalary;
+        this.myComboBox = myComboBox;
         
         initComponents();
         
         idLabel.setText(employeeID);    
         labelName.setText(employeeName);
-        positionLabel.setText(position);  
+//        positionLabel.setText(position);  
         insuranceLabel.setText(formatCurrency(insurance));
         SSSlabel.setText(formatCurrency(sss));
         latesLabel.setText(formatCurrency(lates));
         jLabel12.setText(formatCurrency(pagibig));
         myTotalLabel.setText(formatCurrency(totalDeduction));
         salaryLabel.setText(mySalary);
+        positionLabel.setText(myComboBox);
    
     }
     private String formatCurrency(double value) {
@@ -137,29 +140,29 @@ public class PrintForm extends javax.swing.JPanel {
         salaryLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 24)); // NOI18N
         salaryLabel.setText("Salary in Peso");
 
-        idLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        idLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         idLabel.setText("ID");
 
-        labelName.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        labelName.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         labelName.setText("Name");
 
-        positionLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        positionLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         positionLabel.setText("jLabel15");
 
-        insuranceLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        insuranceLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         insuranceLabel.setText("jLabel16");
 
-        SSSlabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        SSSlabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         SSSlabel.setText("jLabel17");
 
-        latesLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        latesLabel.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         latesLabel.setText("jLabel18");
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 0, 0));
         jLabel10.setText("PAG-IBIG: ");
 
-        jLabel12.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         jLabel12.setText("Pagibig");
 
         jButton1.setBackground(new java.awt.Color(255, 0, 0));

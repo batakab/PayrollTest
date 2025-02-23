@@ -294,7 +294,7 @@
     <Component class="javax.swing.JLabel" name="idLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI" size="14" style="1"/>
+          <Font name="Yu Gothic UI" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="ID"/>
       </Properties>
@@ -302,7 +302,7 @@
     <Component class="javax.swing.JLabel" name="labelName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI" size="14" style="1"/>
+          <Font name="Yu Gothic UI" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
@@ -310,7 +310,7 @@
     <Component class="javax.swing.JLabel" name="positionLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI" size="14" style="1"/>
+          <Font name="Yu Gothic UI" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel15"/>
       </Properties>
@@ -318,7 +318,7 @@
     <Component class="javax.swing.JLabel" name="insuranceLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI" size="14" style="1"/>
+          <Font name="Yu Gothic UI" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel16"/>
       </Properties>
@@ -326,7 +326,7 @@
     <Component class="javax.swing.JLabel" name="SSSlabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI" size="14" style="1"/>
+          <Font name="Yu Gothic UI" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel17"/>
       </Properties>
@@ -334,7 +334,7 @@
     <Component class="javax.swing.JLabel" name="latesLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI" size="14" style="1"/>
+          <Font name="Yu Gothic UI" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel18"/>
       </Properties>
@@ -353,7 +353,7 @@
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic UI" size="14" style="1"/>
+          <Font name="Yu Gothic UI" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Pagibig"/>
       </Properties>

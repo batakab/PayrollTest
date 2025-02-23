@@ -46,7 +46,6 @@ public class Payroll extends javax.swing.JFrame {
         idTextField = new javax.swing.JTextField();
         OTtextField = new javax.swing.JTextField();
         fullNameTextField = new javax.swing.JTextField();
-        posTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         numOfDaysTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -64,6 +63,7 @@ public class Payroll extends javax.swing.JFrame {
         lateTextField = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Payroll");
@@ -147,18 +147,6 @@ public class Payroll extends javax.swing.JFrame {
         fullNameTextField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 fullNameTextFieldKeyTyped(evt);
-            }
-        });
-
-        posTextField.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        posTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                posTextFieldActionPerformed(evt);
-            }
-        });
-        posTextField.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                posTextFieldKeyTyped(evt);
             }
         });
 
@@ -248,6 +236,16 @@ public class Payroll extends javax.swing.JFrame {
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
+        jComboBox1.setFont(new java.awt.Font("Yu Gothic UI", 1, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manager", "Employee", "Staff", "Personal Assistant", "Accountant", "Marketing Expert", "Security Guard" }));
+        jComboBox1.setToolTipText("hello");
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -281,16 +279,18 @@ public class Payroll extends javax.swing.JFrame {
                                             .addComponent(jLabel2))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
-                                                .addGap(37, 37, 37)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(idTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
-                                                    .addComponent(fullNameTextField)
-                                                    .addComponent(posTextField)))
-                                            .addGroup(layout.createSequentialGroup()
                                                 .addGap(18, 18, 18)
                                                 .addComponent(numOfDaysTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(11, 11, 11)
-                                                .addComponent(otLabel))))
+                                                .addComponent(otLabel))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(37, 37, 37)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(idTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGap(115, 115, 115))
+                                                    .addComponent(fullNameTextField)))))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(237, 237, 237)
                                         .addComponent(jLabel1))
@@ -349,7 +349,7 @@ public class Payroll extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(positionLabel)
-                    .addComponent(posTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,7 +367,7 @@ public class Payroll extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(RPHtextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -412,10 +412,6 @@ public class Payroll extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fullNameTextFieldActionPerformed
 
-    private void posTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_posTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_posTextFieldActionPerformed
-
     private void printButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printButtonActionPerformed
        
         if( TotalLabel.getText().trim().isEmpty()){
@@ -423,7 +419,7 @@ public class Payroll extends javax.swing.JFrame {
             return;  
         }
         
-        if(idTextField.getText().trim().isEmpty() || fullNameTextField.getText().trim().isEmpty() || posTextField.getText().trim().isEmpty()){
+        if(idTextField.getText().trim().isEmpty() || fullNameTextField.getText().trim().isEmpty()){
             JOptionPane.showMessageDialog(this, "Text Fields Cannot be Empty", "Warning", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -442,16 +438,17 @@ public class Payroll extends javax.swing.JFrame {
         
         String employeeID = idTextField.getText().trim();
         String employeeName = fullNameTextField.getText().trim();
-        String myPosition = posTextField.getText().trim();
+//        String myPosition = posTextField.getText().trim();
         String myInsurance = insuranceTextfield.getText().trim();
         String mySSS = SSStextField.getText().trim();
         String lates = lateTextField.getText().trim();
         String pagibig = HPtextField.getText().trim();
         String myTotal = TotalLabel.getText().trim();
         String mySalary = TotalLabel.getText().trim();
+        String selectedItem = (String) jComboBox1.getSelectedItem();
         
     javax.swing.JFrame receiptFrame = new javax.swing.JFrame("Payroll Receipt");
-    PrintForm printPanel = new PrintForm(employeeID, employeeName, myPosition, myInsurance, mySSS, lates, finalDeduction, pagibig, myTotal, totalDeduction, mySalary); 
+    PrintForm printPanel = new PrintForm(employeeID, employeeName, myInsurance, mySSS, lates, finalDeduction, pagibig, myTotal, totalDeduction, mySalary, selectedItem); 
 
     receiptFrame.setResizable(false);
     receiptFrame.setExtendedState(JFrame.NORMAL);
@@ -480,7 +477,7 @@ public class Payroll extends javax.swing.JFrame {
             return;  
         }
         
-        if(idTextField.getText().trim().isEmpty() || fullNameTextField.getText().trim().isEmpty() || posTextField.getText().trim().isEmpty()){
+        if(idTextField.getText().trim().isEmpty() || fullNameTextField.getText().trim().isEmpty()){
             JOptionPane.showMessageDialog(this, "Text Fields Cannot be Empty", "Warning", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -489,11 +486,12 @@ public class Payroll extends javax.swing.JFrame {
         
         String employeeID = idTextField.getText().trim();
         String employeeName = fullNameTextField.getText().trim();
-        String myPosition = posTextField.getText().trim();
+//        String myPosition = posTextField.getText().trim();
         String mySalary = TotalLabel.getText().trim();
+        String selectedItem = (String) jComboBox1.getSelectedItem();
         
         javax.swing.JFrame saveForm = new javax.swing.JFrame("");
-        SaveForm formPanel = new SaveForm(employeeID, employeeName, myPosition, mySalary);
+        SaveForm formPanel = new SaveForm(employeeID, employeeName, mySalary, selectedItem);
         
         saveForm.setDefaultCloseOperation(javax.swing.JFrame.DISPOSE_ON_CLOSE);
         saveForm.getContentPane().add(formPanel);  
@@ -677,7 +675,7 @@ public class Payroll extends javax.swing.JFrame {
 
     private void calculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButtonActionPerformed
         
-        if(idTextField.getText().trim().isEmpty() || fullNameTextField.getText().trim().isEmpty() || posTextField.getText().trim().isEmpty()){
+        if(idTextField.getText().trim().isEmpty() || fullNameTextField.getText().trim().isEmpty()){
             JOptionPane.showMessageDialog(this, "Text Fields Cannot be Empty", "Warning", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -733,16 +731,9 @@ public class Payroll extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_RPHtextFieldActionPerformed
 
-    private void posTextFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_posTextFieldKeyTyped
-        String text = posTextField.getText();
-        
-        if(text.length() >= 20){
-            evt.consume();
-            return;
-            
-        }
-        
-    }//GEN-LAST:event_posTextFieldKeyTyped
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -791,6 +782,7 @@ public class Payroll extends javax.swing.JFrame {
     private javax.swing.JLabel idLabel;
     private javax.swing.JTextField idTextField;
     private javax.swing.JTextField insuranceTextfield;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -804,7 +796,6 @@ public class Payroll extends javax.swing.JFrame {
     private javax.swing.JLabel nameLabel;
     private javax.swing.JTextField numOfDaysTextField;
     private javax.swing.JLabel otLabel;
-    private javax.swing.JTextField posTextField;
     private javax.swing.JLabel positionLabel;
     private javax.swing.JButton printButton;
     private javax.swing.JButton saveButton;

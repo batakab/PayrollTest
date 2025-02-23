@@ -13,25 +13,28 @@ public class SaveForm extends javax.swing.JPanel {
    
     private String employeeID;
     private String employeeName;
-    private String position;
+//    private String position;
     private String mySalary;
+    private String myComboBox;
     
     
     
     
-    public SaveForm(String employeeID, String employeeName, String position, String mySalary){
+    public SaveForm(String employeeID, String employeeName, String mySalary, String myComboBox){
         
         this.employeeID = employeeID;
         this.employeeName = employeeName;
-        this.position = position;
+//        this.position = position;
         this.mySalary = mySalary;
+        this.myComboBox = myComboBox;
         
         initComponents();
         
         
         jLabel7.setText(employeeID);
         jLabel8.setText(employeeName);
-        jLabel9.setText(position);
+//        jLabel9.setText(position);
+        jLabel9.setText(myComboBox);
         jLabel6.setText(mySalary);
         
     }
@@ -71,7 +74,7 @@ public class SaveForm extends javax.swing.JPanel {
         jLabel5.setText("Total: ");
 
         jLabel6.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
-        jLabel6.setText("Pesos");
+        jLabel6.setText("0");
 
         jLabel7.setFont(new java.awt.Font("Yu Gothic UI", 1, 18)); // NOI18N
         jLabel7.setText("jLabel7");
@@ -89,27 +92,28 @@ public class SaveForm extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
-                        .addComponent(jLabel8))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel9))))
-                .addGap(123, 123, 123))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(jLabel6)))
+                        .addGap(105, 105, 105))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(96, 96, 96))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(197, 197, 197)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
