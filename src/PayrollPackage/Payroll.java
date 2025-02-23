@@ -463,6 +463,7 @@ public class Payroll extends javax.swing.JFrame {
         @Override
         public void windowClosed(java.awt.event.WindowEvent e) {
             Payroll.this.dispose(); 
+            
         }
     });
     
