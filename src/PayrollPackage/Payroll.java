@@ -409,7 +409,7 @@ public class Payroll extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fullNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fullNameTextFieldActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_fullNameTextFieldActionPerformed
 
     private void printButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_printButtonActionPerformed
@@ -468,7 +468,7 @@ public class Payroll extends javax.swing.JFrame {
     });
     
     
-   
+    
     
     }//GEN-LAST:event_printButtonActionPerformed
 
