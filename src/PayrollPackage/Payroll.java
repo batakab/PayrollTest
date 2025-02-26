@@ -20,10 +20,6 @@ public class Payroll extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         getContentPane().setBackground(new java.awt.Color(211, 211, 211));
-        
-         
-        
-        
     }
 
     /**
@@ -560,33 +556,33 @@ public class Payroll extends javax.swing.JFrame {
         return;
     }
 
-    // Allow only numbers and one decimal point
+    // numbers only and isang decimal point lang
     if (!Character.isDigit(c) && c != '.') { 
         evt.consume();
         return;
     }
 
-    // Ensure only one decimal point is allowed
+    // ensure only one decimal point is allowed
     if (c == '.' && text.contains(".")) {
-        evt.consume(); // Ignore additional decimal points
+        evt.consume(); // to consume yung mga ibang decimal points
         }
     }//GEN-LAST:event_RPHtextFieldKeyTyped
 
     private void OTtextFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_OTtextFieldKeyTyped
          char c = evt.getKeyChar();
-         String text = OTtextField.getText(); // Get current text
+         String text = OTtextField.getText();
     
-    // Prevent input if already at 5 digits
+    // prevent input kapag 5 digits na 
     if (text.length() >= 5) {
         evt.consume();
         return;
         
     }
 
-    // Allow only numeric input (0-9)
+    // input (0-9)only
     if (!Character.isDigit(c)) { 
         evt.consume();
-    }
+        }
     }//GEN-LAST:event_OTtextFieldKeyTyped
 
     private void insuranceTextfieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_insuranceTextfieldKeyTyped
@@ -689,7 +685,7 @@ public class Payroll extends javax.swing.JFrame {
     int lateHours = lateTextField.getText().trim().isEmpty() ? 0 : Integer.parseInt(lateTextField.getText().trim());
     
 
-    // Allow optional deductions (default to 0 if empty)
+    // allow optional deductions (0 kapag empty)
     double insurance = insuranceTextfield.getText().trim().isEmpty() ? 0.0 : Double.parseDouble(insuranceTextfield.getText().trim());
     double sss = SSStextField.getText().trim().isEmpty() ? 0.0 : Double.parseDouble(SSStextField.getText().trim());
     double healthPlan = HPtextField.getText().trim().isEmpty() ? 0.0 : Double.parseDouble(HPtextField.getText().trim());
@@ -697,7 +693,7 @@ public class Payroll extends javax.swing.JFrame {
 
     // Compute earnings
     double regularPay = numOfDays * ratePerHour * 8;
-    double overtimeRate = ratePerHour * 2.25;
+    double overtimeRate = ratePerHour * 1.25;
     double overtimePay = overTime * overtimeRate;
     double totalEarnings = regularPay + overtimePay;
 
@@ -716,7 +712,7 @@ public class Payroll extends javax.swing.JFrame {
             "Error: Net pay cannot be negative!\nPlease check your inputs.", 
             "Calculation Error", 
             JOptionPane.ERROR_MESSAGE);
-        return; // Stop further execution
+        return; 
     }
 
     
